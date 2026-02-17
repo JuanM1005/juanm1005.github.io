@@ -1,0 +1,213 @@
+:root {
+    /* Paleta de colores */
+    --color-background: #050814;
+    --color-background-glass: #070b1ad5;
+    --color-background-sidebar: #070b1a;
+    --color-surface: #0B1220;
+    --color-primary: #1E5EFF;
+    --color-secondary: #0A2A6A;
+    --color-accent: #00D1FF;
+    --color-text: #EAF0FF;
+    --color-muted: #A9B4D0;
+    --color-border: #1A2540;
+
+    /* Colores adicionales */
+    --color-primary-hover: #2D6EFF;
+    --color-primary-active: #1550E6;
+    --color-surface-hover: #121829;
+    --color-success: #00FF88;
+    --color-warning: #FFB800;
+    --color-error: #FF3366;
+
+    /* Tipografia */
+    --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Interlineados */
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.75;
+
+    /* Font weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: var(--leading-normal);
+    font-weight: var(--font-weight-normal);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 3rem;
+    background-color: var(--color-background-glass);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px #00000021;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #00D1FF; */
+}
+
+.brand {
+    display: flex;
+    justify-content: space-center;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo i {
+    font-size: 2rem;
+    cursor: default;
+}
+
+.brand-text {
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-medium);
+    font-size: 1.6rem;
+}
+
+.logo,
+.brand-text {
+    color: var(--color-primary);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    /* background-color: red; */
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--color-muted);
+    font-size: 1.2rem;
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.nav-btn {
+    transition: all 0.3s ease;
+}
+
+.nav-link:focus,
+.nav-link:hover,
+.sidebar-btn:focus,
+.sidebar-btn:hover {
+    background-color: var(--color-surface);
+    border-radius: 10px;
+    transform: scale(1.03);
+    outline: none;
+}
+
+.sidebar-btn,
+.sidebarClose-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    fill: var(--color-text);
+    padding: 5px 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--color-background-sidebar);
+    box-shadow: -10px 0 15px #00000021;
+    z-index: 1001;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.sidebar li {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebarClose-btn,
+.sidebar li a {
+    color: var(--color-muted);
+    font-size: 1.2rem;
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    padding: 1.2rem;
+    display: block;
+    width: 100%;
+}
+
+.sidebarClose-btn:focus,
+.sidebarClose-btn:hover,
+.sidebar li a:hover,
+.sidebar li a:focus {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    border-radius: 0;
+    outline: none;
+    transform: none;
+}
+
+.sidebar.active {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar-btn {
+        display: flex;
+    }
+
+    .nav-link {
+        display: none;
+    }
+
+    .logo i,
+    .brand-text {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .sidebar-btn {
+        display: none;
+    }
+}
