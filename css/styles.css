@@ -533,6 +533,16 @@ body {
     filter: drop-shadow(0 0 2px #ff00cc99);
 }
 
+.animated-section {
+    view-timeline-name: --section;
+    view-timeline-axis: block;
+
+    animation-timeline: --section;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
 /* --- Media Queries (Tablets y Móviles) --- */
 @media screen and (max-width: 768px) {
     html {
@@ -660,6 +670,18 @@ body {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
     }
 }
 
