@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-window.addEventListener('pageshow', () => {
+window.addEventListener('pageshow', (event) => {
     document.body.classList.remove('fade-out');
 });
