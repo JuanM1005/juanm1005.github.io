@@ -37,11 +37,11 @@
     --font-weight-bold: 700;
 
     /* Paddings */
-    --s1: 12px; 
-    --s2: 24px;  
-    --s3: 36px;  
-    --s4: 48px;  
-    --s8: 96px;  
+    --s1: 12px;
+    --s2: 24px;
+    --s3: 36px;
+    --s4: 48px;
+    --s8: 96px;
 }
 
 /* Reset */
@@ -52,7 +52,7 @@
 }
 
 html {
-    font-size: 24px; 
+    font-size: 24px;
     scroll-behavior: smooth;
 }
 
@@ -122,12 +122,13 @@ body {
     font-weight: var(--font-weight-medium);
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
+    transition: transform .3s ease, background-color .3s ease, color .3s ease;
     display: inline-block;
 }
 
 .nav-link:focus-visible,
 .nav-link:hover {
+    color: var(--color-text);
     background-color: var(--color-surface);
     border-radius: 10px;
     transform: scale(1.03);
@@ -145,15 +146,16 @@ body {
     cursor: pointer;
 }
 
+/* Seccion principal */
 .hero-section {
     margin-top: 5rem;
     min-height: calc(100vh - 5rem);
     display: flex;
     align-items: center;
+    font-family: var(--font-display);
 }
 
-/* Seccion principal */
-.container-grid {
+.container {
     width: 100%;
     margin: 0 1rem;
     padding: 0 3rem;
@@ -189,7 +191,6 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid #a9b4d04e;
     color: var(--color-text);
-    font-family: var(--font-display);
     font-size: 0.8rem;
     font-weight: var(--font-weight-medium);
 }
@@ -206,7 +207,6 @@ body {
 
 .hero-title {
     max-width: 12ch;
-    font-family: var(--font-display);
     font-size: clamp(2.4rem, 5vw, 4.8rem);
     line-height: 1.05;
     margin-top: 1rem;
@@ -223,7 +223,6 @@ body {
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
     color: var(--color-text);
-    font-family: var(--font-display);
     font-weight: var(--font-weight-bold);
     margin-bottom: 1rem;
 }
@@ -232,7 +231,6 @@ body {
     max-width: 52ch;
     color: var(--color-muted);
     font-size: 1rem;
-    font-family: var(--font-display);
     font-weight: var(--font-weight-medium);
     line-height: 1.6;
 }
@@ -250,10 +248,13 @@ body {
     padding: 1rem 1.4rem;
     border-radius: 12px;
     text-decoration: none;
-    font-family: var(--font-display);
     font-weight: var(--font-weight-semibold);
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .btn-primary {
@@ -267,7 +268,6 @@ body {
     transform: scale(1.03);
     background: var(--color-accent);
     color: #000000;
-    outline: none;
 }
 
 .btn-primary:focus-visible {
@@ -291,7 +291,7 @@ body {
 
 .hero-circle {
     width: min(650px, 80vw);
-    height: 650px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     background: linear-gradient(225deg, var(--color-primary), var(--color-accent));
     padding: 15px;
@@ -306,15 +306,20 @@ body {
     object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {}
+
+/* Animación del punto en el badge */
 @keyframes pulse {
     0% {
         transform: scale(0.95);
         box-shadow: 0 0 0 0 var(--color-pulse-dot);
     }
+
     70% {
         transform: scale(1);
         box-shadow: 0 0 0 10px var(--color-surface);
     }
+
     100% {
         transform: scale(0.95);
         box-shadow: 0 0 0 0 var(--color-surface);
