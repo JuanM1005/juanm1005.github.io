@@ -1,6 +1,5 @@
 :root {
     --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
     --font-weight-normal: 400;
     --font-weight-medium: 500;
@@ -31,7 +30,7 @@ body {
 
     background: radial-gradient(circle at top, #0a1a3a, #050814);
 
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     color: #EAF0FF;
     text-align: center;
 
