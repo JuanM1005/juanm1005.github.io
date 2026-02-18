@@ -14,34 +14,52 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    height: 100vh;
+    height: 100%;
+}
+
+html {
+    background: radial-gradient(circle at top, #0a1b3d, #070a15);
+    background-color: #070a15;
+}
+
+body {
+    min-height: 100dvh;
+    height: auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 1.5rem;
 
     background: radial-gradient(circle at top, #0a1b3d, #070a15);
+    background-color: #070a15;
+
     font-size: 16px;
     font-family: var(--font-body);
     color: #EAF0FF;
     text-align: center;
+
     overflow: hidden;
+    overscroll-behavior: none;
 
     transition: opacity 0.5s ease;
-
     position: relative;
 }
 
+/* Grid animado de puntos */
 body::before {
     content: "";
     position: absolute;
     inset: 0;
+
     background: radial-gradient(#1e5eff22 1px, transparent 1px);
     background-size: 30px 30px;
+
     pointer-events: none;
     animation: moveGrid 8s linear infinite;
+
     z-index: 0;
 }
 
@@ -69,6 +87,7 @@ body::before {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
     word-break: break-word;
     margin-bottom: 1.5rem;
 }
@@ -95,12 +114,16 @@ body::before {
     border-radius: 12px;
     font-size: 1rem;
     cursor: pointer;
+
     background: #1E5EFF;
     color: #FFFFFF;
+
     transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+
     font-weight: var(--font-weight-semibold);
     letter-spacing: 0.2rem;
     text-transform: uppercase;
+
     width: min(160px, 100%);
 }
 
