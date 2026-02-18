@@ -1,27 +1,29 @@
-const sidebarToggle = document.getElementById('sidebarToggle');
-const sidebar = document.querySelector('.sidebar');
-const sidebarLinks = document.querySelectorAll('.sidebar a');
-const sidebarCloseBtn = document.getElementById('sidebar-btn-close');
+const botonMenu = document.getElementById('sidebarToggle');
+const menuDesplegable = document.getElementById('mobileMenu');
+const enlacesMenu = document.querySelectorAll('.mobile-nav-links a');
+const iconoMenu = botonMenu.querySelector('i');
 
-sidebarToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-});
+if (botonMenu && menuDesplegable) {
+    botonMenu.addEventListener('click', () => {
+        // 'toggle' alterna, quita la clase si esta, de lo contrario la asigna (en el css esta definida con display flex, lo que hara sera mostrar el menu)
+        menuDesplegable.classList.toggle('active');
 
-// Cerrar con botón X
-sidebarCloseBtn.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-});
-
-// Cerrar al hacer clic en un enlace
-sidebarLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        sidebar.classList.remove('active');
+        // Cuando aparece el menu desplegable, el icono ☰ pasa a ser ✖, cambiando la clase del icono
+        if (menuDesplegable.classList.contains('active')) {
+            iconoMenu.classList.remove('fa-bars');
+            iconoMenu.classList.add('fa-xmark');
+        } else {
+            iconoMenu.classList.remove('fa-xmark');
+            iconoMenu.classList.add('fa-bars');
+        }
     });
-});
 
-// Cerrar al hacer clic fuera
-document.addEventListener('click', (e) => {
-    if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
-        sidebar.classList.remove('active');
-    }
-});
+    // Al dar click en una seccion del menu, este se oculta y el icono se resetea a ☰
+    enlacesMenu.forEach(link => {
+        link.addEventListener('click', () => {
+            menuDesplegable.classList.remove('active');
+            iconoMenu.classList.remove('fa-xmark');
+            iconoMenu.classList.add('fa-bars');
+        });
+    });
+};

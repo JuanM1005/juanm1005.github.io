@@ -15,7 +15,7 @@
 
     <!-- Encabezado -->
     <header class="header">
-        <div class="nav-container">
+        <div class="header-container">
             <!-- Logo -->
             <div class="logo">
                 <a href="#hero" class="icon-logo text-accent">
@@ -25,24 +25,29 @@
             </div>
 
             <!-- Navbar con links -->
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            <nav class="nav-container">
+                <ul class="desktop-nav-links">
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
 
-            <!-- Boton navbar movil -->
-            <button class="mobile-menu-btn" aria-label="Abrir menú">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
+            <!-- Botones navbar movil -->
+            <button id="sidebarToggle" class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
             </button>
+        </div>
+
+        <!-- Navbar movil -->
+        <div id="mobileMenu" class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </div>
     </header>
 
@@ -65,9 +70,8 @@
                     </span>
 
                     <h2 class="hero-about">
-                        Desarrollo proyectos académicos enfocados en estructuras de datos,
-                        sistemas de gestión y análisis de datos. Trabajo con C, C++, Python,
-                        bases de datos y control de versiones con Git y GitHub.
+                        Desarrollador en formación, disciplinado y comprometido con la mejora constante y el aprendizaje
+                        continuo.
                     </h2>
 
                     <div class="hero-actions">
@@ -83,7 +87,21 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sección sobre -->
+        <section id="about" class="about-secton">
+            <div class="container-about">
+                <h2 class="about-title">Sobre mí</h2>
+                <p class="section-about-info">
+                    Desarrollo proyectos académicos enfocados en estructuras de datos,
+                    sistemas de gestión y análisis de datos. Trabajo con C, C++, Python,
+                    bases de datos y control de versiones con Git y GitHub.
+                </p>
+            </div>
+        </section>
     </main>
+
+    <script src="js/navbar.js"></script>
 </body>
 
 </html>
