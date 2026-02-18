@@ -10,6 +10,8 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="preload" as="image" href="images/perfil.webp">
     <script src="https://kit.fontawesome.com/0d982cbb00.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +37,8 @@
             <nav class="nav-container">
                 <ul class="desktop-nav-links">
                     <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -139,8 +141,56 @@
                         reales en proyectos escolares.
                     </p>
                 </article>
-
         </section>
+
+        <!-- Sección tecnologias -->
+        <section id="skills" class="skills-section">
+            <div class="container-skills">
+                <h2 class="skills-title">Habilidades</h2>
+                <p class="skills-info">
+                    Competencias técnicas y personales que aplico en mis proyectos académicos y desarrollo profesional.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Hard skills -->
+                <article class="skills-card hard">
+                    <div class="skills-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+
+                    <h3 class="skills-title">Hard Skills</h3>
+
+                    <ul class="skills-list">
+                        <li><i class="fa-solid fa-code"></i> C & C++</li>
+                        <li><i class="fa-brands fa-python"></i> Python</li>
+                        <li><i class="fa-solid fa-database"></i> MySQL & SQLite</li>
+                        <li><i class="fa-solid fa-chart-line"></i> Pandas, NumPy & Matplotlib</li>
+                        <li><i class="fa-brands fa-html5"></i> HTML</li>
+                        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                        <li><i class="fa-brands fa-git-alt"></i> Git & GitHub</li>
+                    </ul>
+                </article>
+
+                <!-- Soft skills -->
+                <article class="skills-card soft">
+                    <div class="skills-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <h3 class="skills-title">Soft Skills</h3>
+
+                    <ul class="skills-list">
+                        <li><i class="fa-solid fa-check"></i> Disciplina y compromiso</li>
+                        <li><i class="fa-solid fa-lightbulb"></i> Aprendizaje continuo</li>
+                        <li><i class="fa-solid fa-people-group"></i> Trabajo en equipo</li>
+                        <li><i class="fa-solid fa-arrows-rotate"></i> Adaptabilidad</li>
+                        <li><i class="fa-solid fa-arrow-trend-up"></i> Enfoque en mejora constante</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <script src="js/navbar.js"></script>
