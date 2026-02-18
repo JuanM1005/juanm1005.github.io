@@ -202,7 +202,7 @@ body {
 
 /* Seccion principal */
 .hero-section {
-    margin-top: 6.5rem;
+    margin-top: 4rem;
     min-height: calc(100vh - 6.5rem);
     display: flex;
     align-items: center;
