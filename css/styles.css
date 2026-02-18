@@ -53,6 +53,11 @@ body {
     overflow-x: hidden;
 }
 
+.fade-in {
+    opacity: 0;
+    animation: fadeInPage 0.8s ease forwards;
+}
+
 /* Encabezado */
 .header {
     position: fixed;
@@ -284,7 +289,7 @@ body {
     max-width: 52ch;
     color: var(--color-muted);
     font-size: 1rem;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-normal);
     line-height: 1.6;
 }
 
@@ -302,6 +307,8 @@ body {
     border-radius: 12px;
     text-decoration: none;
     font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
     font-size: 1rem;
     transition:
         transform 0.3s ease,
@@ -432,6 +439,17 @@ body {
 
     .header-container {
         gap: 15px;
+    }
+}
+
+/* Animación al entrar en esta pagina */
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 

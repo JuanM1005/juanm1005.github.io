@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Portafolio - Juan Mares</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="preload" as="image" href="images/perfil.webp">
+    <script src="https://kit.fontawesome.com/0d982cbb00.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body class="fade-in">
+
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#hero" class="icon-logo text-accent">
+                    <i class="fa-solid fa-code"></i>
+                </a>
+                <a href="#hero" class="brand-text">Portfolio<span class="text-accent">.</span>Juan</a>
+            </div>
+
+            <!-- Navbar con links -->
+            <nav class="nav-container">
+                <ul class="desktop-nav-links">
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botones navbar movil -->
+            <button id="sidebarToggle" class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Navbar movil -->
+        <div id="mobileMenu" class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-left">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span>Disponible para trabajar</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hola soy, <span>Juan Antonio Aguirre Mares</span>
+                    </h1>
+
+                    <span class="hero-profession">
+                        ESTUDIANTE DE INGENIERÍA INFORMÁTICA
+                    </span>
+
+                    <h2 class="hero-about">
+                        Desarrollador en formación, disciplinado y comprometido con la mejora constante y el aprendizaje
+                        continuo.
+                    </h2>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+                        <a class="btn btn-secondary" href="#contacto">Contactar</a>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="hero-circle">
+                        <img src="images/perfil.webp" alt="Foto de Juan Antonio Aguirre Mares">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección sobre -->
+        <section id="about" class="about-secton">
+            <div class="container-about">
+                <h2 class="about-title">Sobre mí</h2>
+                <p class="section-about-info">
+                    Desarrollo proyectos académicos enfocados en estructuras de datos,
+                    sistemas de gestión y análisis de datos. Trabajo con C, C++, Python,
+                    bases de datos y control de versiones con Git y GitHub.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/navbar.js"></script>
+</body>
+
+</html>
