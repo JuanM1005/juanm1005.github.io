@@ -37,11 +37,11 @@
     --font-weight-bold: 700;
 
     /* Paddings */
-    --s1: 8px;
-    --s2: 16px;
-    --s3: 24px;
-    --s4: 32px;
-    --s8: 64px;
+    --s1: 12px; 
+    --s2: 24px;  
+    --s3: 36px;  
+    --s4: 48px;  
+    --s8: 96px;  
 }
 
 /* Reset */
@@ -52,7 +52,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 24px; 
     scroll-behavior: smooth;
 }
 
@@ -62,6 +62,7 @@ body {
     color: var(--color-text);
     line-height: var(--leading-normal);
     font-weight: var(--font-weight-normal);
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -75,7 +76,7 @@ body {
     background: var(--color-background-glass);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 15px #00000021;
-    padding: var(--s4) 3rem;
+    padding: var(--s2) 3rem;
 }
 
 .nav-container {
@@ -102,13 +103,16 @@ body {
     color: var(--color-accent);
 }
 
+.navbar {
+    padding: 0.8rem 0;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
     list-style: none;
-    /* background-color: red; */
 }
 
 .nav-link {
@@ -116,7 +120,7 @@ body {
     color: var(--color-muted);
     font-family: var(--font-display);
     font-weight: var(--font-weight-medium);
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
     display: inline-block;
@@ -142,8 +146,8 @@ body {
 }
 
 .hero-section {
-    margin-top: 40px;
-    min-height: calc(100vh - 40px);
+    margin-top: 5rem;
+    min-height: calc(100vh - 5rem);
     display: flex;
     align-items: center;
 }
@@ -152,7 +156,7 @@ body {
 .container-grid {
     width: 100%;
     margin: 0 1rem;
-    padding: 2rem 3rem;
+    padding: 0 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -160,21 +164,21 @@ body {
 }
 
 .hero-left {
-    flex: 1 1 520px;
+    flex: 1 1 780px;
     display: flex;
     flex-direction: column;
     padding: 2rem 3.5rem;
 }
 
 .hero-right {
-    flex: 1 1 420px;
+    flex: 1 1 630px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .status-badge {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -186,7 +190,7 @@ body {
     border: 1px solid #a9b4d04e;
     color: var(--color-text);
     font-family: var(--font-display);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: var(--font-weight-medium);
 }
 
@@ -201,6 +205,7 @@ body {
 }
 
 .hero-title {
+    max-width: 12ch;
     font-family: var(--font-display);
     font-size: clamp(2.4rem, 5vw, 4.8rem);
     line-height: 1.05;
@@ -215,20 +220,20 @@ body {
 }
 
 .hero-profession {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     letter-spacing: 0.2rem;
-    color: var(--color-muted);
+    color: var(--color-text);
     font-family: var(--font-display);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-bold);
     margin-bottom: 1rem;
 }
 
 .hero-about {
     max-width: 52ch;
     color: var(--color-muted);
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-family: var(--font-display);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-medium);
     line-height: 1.6;
 }
 
@@ -247,7 +252,7 @@ body {
     text-decoration: none;
     font-family: var(--font-display);
     font-weight: var(--font-weight-semibold);
-    font-size: 1.5rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -279,22 +284,17 @@ body {
 .btn-secondary:focus-visible,
 .btn-secondary:hover {
     transform: scale(1.03);
-}
-
-.btn-secondary:focus-visible,
-.btn-secondary:hover {
     background: var(--color-secondary);
     outline: 2px solid var(--color-primary);
     outline-offset: 3px;
 }
 
-
 .hero-circle {
-    width: min(520px, 70vw);
-    height: 520px;
+    width: min(650px, 80vw);
+    height: 650px;
     border-radius: 50%;
     background: linear-gradient(225deg, var(--color-primary), var(--color-accent));
-    padding: 10px;
+    padding: 15px;
     overflow: hidden;
     box-shadow: 0 25px 35px #0d0f36bd;
 }
@@ -311,12 +311,10 @@ body {
         transform: scale(0.95);
         box-shadow: 0 0 0 0 var(--color-pulse-dot);
     }
-
     70% {
         transform: scale(1);
         box-shadow: 0 0 0 10px var(--color-surface);
     }
-
     100% {
         transform: scale(0.95);
         box-shadow: 0 0 0 0 var(--color-surface);
