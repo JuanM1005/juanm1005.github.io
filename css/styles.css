@@ -52,7 +52,7 @@
 }
 
 html {
-    font-size: 24px;
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -290,7 +290,7 @@ body {
 }
 
 .hero-circle {
-    width: min(650px, 80vw);
+    width: min(550px, 80vw);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     background: linear-gradient(225deg, var(--color-primary), var(--color-accent));
