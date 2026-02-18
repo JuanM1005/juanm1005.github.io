@@ -19,9 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
  * Se dispara cada vez que la página se vuelve visible.
  */
 window.addEventListener('pageshow', (event) => {
-    // Eliminamos la clase fade-out para asegurar que el contenido sea visible
-    document.body.classList.remove('fade-out');
-    
-    // Forzamos la opacidad del body por si acaso el navegador guardó el estado intermedio
-    document.body.style.opacity = "1";
+    // La propiedad persisted es true si la página se carga desde el caché del navegador (botón atrás)
+    if (event.persisted || document.body.classList.contains('fade-out')) {
+        // Eliminamos la clase que oculta el contenido
+        document.body.classList.remove('fade-out');
+
+        // Forzamos un re-render visual para que vuelva a cargar correctamente
+        document.body.style.display = 'none';
+        document.body.offsetHeight;
+        document.body.style.display = 'flex';
+    }
 });
