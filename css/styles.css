@@ -383,11 +383,13 @@ body {
     background: var(--color-background-sections);
     margin: 0 1rem;
     padding: 2rem 1.5rem;
+    scroll-margin-top: 22rem;
     /* border: 2px solid palevioletred; */
 }
 
 .skills-section {
     background: transparent;
+    scroll-margin-top: 25rem
 }
 
 .container-skills,
@@ -676,7 +678,7 @@ body {
 @keyframes show {
     from {
         opacity: 0;
-        scale: 25%;
+        scale: 50%;
     }
 
     to {
