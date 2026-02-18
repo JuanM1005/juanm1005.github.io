@@ -16,6 +16,13 @@
     --color-success: #00FF88;
     --color-pulse-dot: #22c55e;
 
+    /* Colores adicionales */
+    --color-violet: #CC0099;
+    --color-violet-secondary: #ff6fdb;
+    --color-red-orange: #FF3300;
+    --color-red-orange-secondary: #ff7451;
+    --color-cyan: #48ddffcb;
+
     /* Tipografia */
     --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
 
@@ -43,10 +50,10 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    font-family: var(--font-display);
 }
 
 body {
-    font-family: var(--font-display);
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: var(--leading-normal);
@@ -72,7 +79,7 @@ body {
     box-shadow: -10px 0 15px #00000021;
     padding: var(--s2) 3rem;
     border-bottom: 1px solid #a9b4d020;
-    /* border: 2px solid red; */
+    /* border: 2px solid cadetblue; */
 }
 
 .header-container {
@@ -95,7 +102,6 @@ body {
 
 .icon-logo,
 .brand-text {
-    font-family: var(--font-display);
     font-weight: var(--font-weight-bold);
     color: var(--color-text);
     font-size: 1.6rem;
@@ -126,7 +132,6 @@ body {
     display: inline-flex;
     text-decoration: none;
     color: var(--color-muted);
-    font-family: var(--font-display);
     font-weight: var(--font-weight-medium);
     font-size: 1rem;
     padding: 0.5rem 1rem;
@@ -166,14 +171,18 @@ body {
     border-bottom: 1px solid var(--color-border);
     overflow: hidden;
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition: all 0.4s ease-in-out;
     z-index: 900;
-    /* outline: 2px solid red; */
 }
 
 .mobile-nav.active {
     max-height: 400px;
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
     padding-bottom: 1rem;
 }
 
@@ -209,7 +218,6 @@ body {
     height: calc(100% - 4rem);
     display: flex;
     align-items: center;
-    font-family: var(--font-display);
     /* border: 2px solid lime; */
 }
 
@@ -226,15 +234,15 @@ body {
 
 .hero-left {
     /* border: 2px solid green; */
-    flex: 1 1 780px;
+    flex: 1 1 50%;
     display: flex;
     flex-direction: column;
-    padding: 0 3.5rem;
+    padding: 0 1rem;
 }
 
 .hero-right {
     /* border: 2px solid green; */
-    flex: 1 1 630px;
+    flex: 1 1 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -369,7 +377,8 @@ body {
     object-fit: cover;
 }
 
-/* Seccion sobre */
+/* Seccion sobre + estilos de skills */
+.skills-section,
 .about-section {
     background: var(--color-background-sections);
     margin: 0 1rem;
@@ -377,6 +386,11 @@ body {
     /* border: 2px solid palevioletred; */
 }
 
+.skills-section {
+    background: transparent;
+}
+
+.container-skills,
 .container-about {
     text-align: center;
     max-width: 900px;
@@ -390,12 +404,14 @@ body {
     margin-bottom: 0.9rem;
 }
 
+.skills-info,
 .section-about-info {
     color: var(--color-muted);
     line-height: var(--leading-medium);
     font-size: 1.1rem;
 }
 
+.skills-grid,
 .about-grid {
     /* border: 2px solid plum; */
     display: grid;
@@ -405,8 +421,13 @@ body {
     margin: 0 auto;
 }
 
+.skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.skills-card,
 .about-card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+    background: linear-gradient(180deg, #ffffff08, #ffffff04);
     border: 1px solid var(--color-border-card);
     border-radius: 18px;
     padding: 2rem 1.8rem;
@@ -414,12 +435,18 @@ body {
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
+.skills-card:hover,
 .about-card:hover {
     transform: translateY(-6px);
     border-color: var(--color-primary);
-    cursor: default;
+    cursor: pointer;
 }
 
+.skills-card:hover {
+    border-color: var(--color-cyan);
+}
+
+.skills-icon,
 .about-icon {
     width: 64px;
     height: 64px;
@@ -429,6 +456,7 @@ body {
     margin: 0 auto;
 }
 
+.skills-icon i,
 .about-icon i {
     font-size: 1.2rem;
     color: var(--color-text);
@@ -447,10 +475,65 @@ body {
 .about-grid .about-card:nth-child(3) .about-icon {
     box-shadow: 0 0 10px #04ff5440;
     background: linear-gradient(135deg, #00FF88, #22C55E);
-
 }
 
-/* --- Media Queries (Tablet y Móvil) --- */
+/* Seccion skills */
+.skills-title {
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: 0.5rem;
+}
+
+.skills-grid .skills-card:first-child .skills-icon {
+    box-shadow: 0 0 10px #ff370040;
+    background: var(--color-red-orange);
+}
+
+.skills-grid .skills-card:last-child .skills-icon {
+    box-shadow: 0 0 10px #ff03cd40;
+    background: var(--color-violet);
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 1rem 0.5rem;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.skills-list li {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--color-muted);
+    padding: 0.4rem 0.6rem;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #ffffff08, #ffffff04);
+    border: 1px solid var(--color-border-card);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skills-list li:hover {
+    border: 1px solid var(--color-cyan);
+    cursor: pointer;
+}
+
+.skills-card.hard .skills-list li i {
+    color: var(--color-red-orange-secondary);
+    filter: drop-shadow(0 0 2px #FF000099);
+}
+
+.skills-card.soft .skills-list li i {
+    color: var(--color-violet-secondary);
+    filter: drop-shadow(0 0 2px #ff00cc99);
+}
+
+/* --- Media Queries (Tablets y Móviles) --- */
 @media screen and (max-width: 768px) {
     html {
         font-size: 16px;
@@ -470,6 +553,7 @@ body {
     }
 
     .hero-section {
+        margin: 0;
         margin-top: 6.5rem;
         height: auto;
         padding: 1rem 0;
@@ -513,6 +597,13 @@ body {
         justify-content: center;
     }
 
+    .skills-section,
+    .about-section {
+        margin: 0;
+        padding: 0.9rem;
+    }
+
+    .skills-grid,
     .about-grid {
         grid-template-columns: 1fr;
     }
@@ -522,13 +613,42 @@ body {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+        gap: 2rem;
+    }
+
+    .hero-circle {
+        width: min(22rem, 60vw);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .desktop-nav-links a {
+        padding: 0.5rem 0.6rem;
+    }
+}
+
 @media screen and (max-width: 420px) {
     .header {
-        padding: 1rem 1rem;
+        padding: 1rem 0.5rem;
     }
 
     .header-container {
-        gap: 15px;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .icon-logo,
+    .brand-text {
+        font-size: 1.3rem;
+    }
+
+    .mobile-menu-btn {
+        font-size: 26px;
     }
 }
 
