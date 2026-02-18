@@ -210,11 +210,11 @@ body {
     display: flex;
     align-items: center;
     font-family: var(--font-display);
-    border: 2px solid lime;
+    /* border: 2px solid lime; */
 }
 
 .container {
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     width: 100%;
     margin: 0 1rem;
     padding: 0 3rem;
@@ -374,7 +374,7 @@ body {
     background: var(--color-background-sections);
     margin: 0 1rem;
     padding: 2rem 1.5rem;
-    border: 2px solid palevioletred;
+    /* border: 2px solid palevioletred; */
 }
 
 .container-about {
@@ -382,7 +382,7 @@ body {
     max-width: 900px;
     margin: 0 auto 2rem;
     padding-bottom: 1.2rem;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
 }
 
 .about-title {
