@@ -1,7 +1,17 @@
-const enterBtn = document.getElementById('enterBtn');
+document.addEventListener('DOMContentLoaded', () => {
+    const enterBtn = document.getElementById('enterBtn');
 
-enterBtn.addEventListener('click', () => {
-    document.body.classList.add('fade-out');
+    if (!enterBtn) return;
 
-    window.location.href = "main.html";
+    enterBtn.addEventListener('click', () => {
+        document.body.classList.add('fade-out');
+
+        setTimeout(() => {
+            window.location.href = "main.html";
+        }, 500);
+    });
+});
+
+window.addEventListener('pageshow', () => {
+    document.body.classList.remove('fade-out');
 });

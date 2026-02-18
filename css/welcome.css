@@ -14,41 +14,35 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 html {
-    background: radial-gradient(circle at top, #0a1b3d, #070a15);
-    background-color: #070a15;
+    background: radial-gradient(circle at top, #0a1a3a, #050814);
+    background-color: #050814;
 }
 
 body {
+    min-height: 100svh;
     min-height: 100dvh;
-    height: auto;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 1.5rem;
 
-    background: radial-gradient(circle at top, #0a1b3d, #070a15);
-    background-color: #070a15;
+    background: radial-gradient(circle at top, #0a1a3a, #050814);
 
-    font-size: 16px;
     font-family: var(--font-body);
     color: #EAF0FF;
     text-align: center;
 
-    overflow: hidden;
-    overscroll-behavior: none;
-
-    transition: opacity 0.5s ease;
     position: relative;
+    overflow: hidden;
+
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
-/* Grid animado de puntos */
+/* Patrón animado de puntos */
 body::before {
     content: "";
     position: absolute;
@@ -57,82 +51,71 @@ body::before {
     background: radial-gradient(#1e5eff22 1px, transparent 1px);
     background-size: 30px 30px;
 
-    pointer-events: none;
     animation: moveGrid 8s linear infinite;
 
+    pointer-events: none;
     z-index: 0;
 }
 
+/* Fade al salir */
 .fade-out {
     opacity: 0;
 }
 
+/* Contenido */
 .welcome-container {
-    font-family: var(--font-display);
-    animation: fadeIn 1.2s ease;
-
+    position: relative;
+    z-index: 1;
     max-width: 520px;
     width: 100%;
 
-    z-index: 1;
-    position: relative;
+    animation: fadeIn 1.2s ease;
 }
 
 .welcome-title {
-    font-size: clamp(2.4rem, 7vw, 6rem);
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 6rem);
     text-transform: uppercase;
-    line-height: 1.05;
 
-    background: linear-gradient(to top, #000589, #00a0f6);
+    background: linear-gradient(to top, #043ac4, #73e5ff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    word-break: break-word;
-    margin-bottom: 1.5rem;
 }
 
 .welcome-profession {
-    font-size: clamp(0.6rem, 3.5vw, 1rem);
+    margin-top: 1rem;
     font-weight: var(--font-weight-bold);
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
     color: #A9B4D0;
 }
 
 .welcome-text {
     margin-top: 0.5rem;
     color: #A9B4D0;
-    font-weight: var(--font-weight-normal);
-    font-size: clamp(0.95rem, 3.2vw, 1.05rem);
+    font-weight: var(--font-weight-semibold);
 }
 
 .btn-enter {
     margin-top: 2rem;
     padding: 1rem 2rem;
     border: none;
-    border-radius: 12px;
+    border-radius: 14px;
     font-size: 1rem;
     cursor: pointer;
 
     background: #1E5EFF;
     color: #FFFFFF;
 
-    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
-
-    font-weight: var(--font-weight-semibold);
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-
-    width: min(160px, 100%);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .btn-enter:hover {
     transform: scale(1.05);
     background: #00D1FF;
-    color: black;
+    color: #000;
 }
 
+/* Animaciones */
 @keyframes moveGrid {
     from {
         transform: translateX(0);
@@ -152,16 +135,5 @@ body::before {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 1.25rem;
-    }
-
-    .btn-enter {
-        padding: 0.95rem 1.2rem;
-        border-radius: 14px;
     }
 }
