@@ -768,6 +768,7 @@ body {
 }
 
 .btn-submit {
+    border: none;
     cursor: pointer;
 }
 
