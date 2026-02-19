@@ -468,6 +468,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.projects-grid {
+    align-items: stretch;
+}
+
 .about-card,
 .skills-card,
 .projects-card {
@@ -482,6 +486,7 @@ body {
 .projects-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .about-card:hover,
@@ -577,7 +582,7 @@ body {
     filter: drop-shadow(0 0 2px #ff00cc99);
 }
 
-.animated-section {
+/* .animated-section {
     view-timeline-name: --section;
     view-timeline-axis: block;
 
@@ -585,12 +590,13 @@ body {
     animation-name: show;
     animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
-}
+} */
 
 /* Sección proyectos */
 .project-img-container {
     /* border: 2px solid violet; */
     width: 100%;
+    aspect-ratio: 16 / 9;
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 1.2rem;
@@ -604,7 +610,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.project-img-container img {
+.projects-card:hover .project-img-container img {
     transform: scale(1.05);
 }
 
@@ -641,7 +647,7 @@ body {
 }
 
 .btn-github {
-    margin: 0 auto;
+    margin-top: auto;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -829,28 +835,6 @@ body {
     }
 }
 
-@keyframes show {
-    from {
-        opacity: 0;
-        scale: 25%;
-    }
-
-    to {
-        opacity: 1;
-        scale: 100%;
-    }
-}
-
-@keyframes moveGrid {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(40px);
-    }
-}
-
 /* Animación del punto en el badge */
 @keyframes pulse {
     0% {
@@ -866,5 +850,27 @@ body {
     100% {
         transform: scale(0.95);
         box-shadow: 0 0 0 0 var(--color-surface);
+    }
+}
+
+/* @keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+} */
+
+@keyframes moveGrid {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(40px);
     }
 }
