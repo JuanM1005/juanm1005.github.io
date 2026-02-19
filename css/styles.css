@@ -218,7 +218,22 @@ body {
     height: calc(100% - 4rem);
     display: flex;
     align-items: center;
-    /* border: 2px solid lime; */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(#1e5eff22 1px, transparent 1px);
+    background-size: 30px 30px;
+
+    animation: moveGrid 5s linear infinite;
+
+    pointer-events: none;
+    z-index: 0;
 }
 
 .container {
@@ -377,23 +392,45 @@ body {
     object-fit: cover;
 }
 
-/* Seccion sobre + estilos de skills */
+.hero-section {
+    scroll-margin-top: 130px;
+}
+
+/* Seccion sobre + estilos de skills y proyectos */
+.about-section,
 .skills-section,
-.about-section {
+.projects-section {
     background: var(--color-background-sections);
     margin: 0 1rem;
     padding: 2rem 1.5rem;
-    scroll-margin-top: 22rem;
+    scroll-margin-top: 6rem;
     /* border: 2px solid palevioletred; */
 }
 
 .skills-section {
     background: transparent;
-    scroll-margin-top: 25rem
+    scroll-margin-top: 6rem;
+    position: relative;
+    overflow: hidden;
 }
 
+.skills-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(#1e5eff22 1px, transparent 1px);
+    background-size: 30px 30px;
+
+    animation: moveGrid 5s linear infinite;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container-about,
 .container-skills,
-.container-about {
+.container-projects {
     text-align: center;
     max-width: 900px;
     margin: 0 auto 2rem;
@@ -401,21 +438,25 @@ body {
     /* border: 2px solid pink; */
 }
 
-.about-title {
-    font-size: clamp(2.2rem, 4vw, 3.6rem);
+.about-title,
+.skills-title,
+.projects-title {
+    font-size: clamp(2rem, 3vw, 3rem);
     margin-bottom: 0.9rem;
 }
 
+.about-info,
 .skills-info,
-.section-about-info {
+.projects-info {
     color: var(--color-muted);
     line-height: var(--leading-medium);
     font-size: 1.1rem;
 }
 
+.about-grid,
 .skills-grid,
-.about-grid {
-    /* border: 2px solid plum; */
+.projects-grid {
+    /* border: 2px solid pink; */
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.4rem;
@@ -427,8 +468,9 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.about-card,
 .skills-card,
-.about-card {
+.projects-card {
     background: linear-gradient(180deg, #ffffff08, #ffffff04);
     border: 1px solid var(--color-border-card);
     border-radius: 18px;
@@ -437,8 +479,14 @@ body {
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
+.projects-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card:hover,
 .skills-card:hover,
-.about-card:hover {
+.projects-card:hover {
     transform: translateY(-6px);
     border-color: var(--color-primary);
     cursor: pointer;
@@ -448,10 +496,10 @@ body {
     border-color: var(--color-cyan);
 }
 
-.skills-icon,
-.about-icon {
-    width: 64px;
-    height: 64px;
+.about-icon,
+.skills-icon {
+    width: 80px;
+    height: 80px;
     border-radius: 16px;
     display: grid;
     place-items: center;
@@ -460,7 +508,7 @@ body {
 
 .skills-icon i,
 .about-icon i {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     color: var(--color-text);
 }
 
@@ -480,12 +528,6 @@ body {
 }
 
 /* Seccion skills */
-.skills-title {
-    text-align: center;
-    font-size: clamp(2rem, 3vw, 3rem);
-    margin-bottom: 0.5rem;
-}
-
 .skills-grid .skills-card:first-child .skills-icon {
     box-shadow: 0 0 10px #ff370040;
     background: var(--color-red-orange);
@@ -535,7 +577,7 @@ body {
     filter: drop-shadow(0 0 2px #ff00cc99);
 }
 
-.animated-section {
+/* .animated-section {
     view-timeline-name: --section;
     view-timeline-axis: block;
 
@@ -543,6 +585,74 @@ body {
     animation-name: show;
     animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
+} */
+
+/* Sección proyectos */
+.project-img-container {
+    /* border: 2px solid violet; */
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 8px 10px var(--color-border);
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-img-container img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-desc {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    line-height: var(--leading-normal);
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    margin-top: auto;
+}
+
+.project-tag {
+    background: linear-gradient(180deg, #ffffff08, #ffffff04);
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    border: 1px solid var(--color-border-card);
+}
+
+.btn-github {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.4rem;
+}
+
+.btn-github:focus-visible,
+.btn-github:hover {
+    outline: 2px solid var(--color-text);
 }
 
 /* --- Media Queries (Tablets y Móviles) --- */
@@ -609,18 +719,22 @@ body {
         justify-content: center;
     }
 
+    .about-section,
     .skills-section,
-    .about-section {
+    .projects-section {
         margin: 0;
         padding: 0.9rem;
     }
 
+    .about-grid,
     .skills-grid,
-    .about-grid {
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
-    .about-card {
+    .about-card,
+    .skills-card,
+    .projects-card {
         padding: 2rem 1.5rem;
     }
 }
@@ -635,7 +749,9 @@ body {
         width: min(22rem, 60vw);
     }
 
-    .about-grid {
+    .about-grid,
+    .skills-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
@@ -678,12 +794,22 @@ body {
 @keyframes show {
     from {
         opacity: 0;
-        scale: 50%;
+        scale: 25%;
     }
 
     to {
         opacity: 1;
         scale: 100%;
+    }
+}
+
+@keyframes moveGrid {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(40px);
     }
 }
 
@@ -704,3 +830,4 @@ body {
         box-shadow: 0 0 0 0 var(--color-surface);
     }
 }
+
