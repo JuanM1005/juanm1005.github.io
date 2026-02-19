@@ -768,7 +768,7 @@ body {
 }
 
 .btn-submit {
-    border: none;
+    border: 1px solid var(--color-primary);
     cursor: pointer;
 }
 
