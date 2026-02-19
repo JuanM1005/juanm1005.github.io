@@ -195,24 +195,19 @@ body::before {
 }
 
 @media screen and (max-width: 768px) {
-    .glass-card  {
-        padding: 2.5rem 1.5rem;
+    .welcome-name {
+        font-size: 3rem;
     }
 
     .welcome-last-name {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     .welcome-profession {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .welcome-text {
-        font-size: 0.6rem;
-    }
-
-    .btn-enter {
-        padding: 1rem 1.4rem;
         font-size: 0.8rem;
     }
 }
