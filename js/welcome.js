@@ -9,13 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Pequeño retraso para permitir que la animación se vea antes de cambiar de página
         setTimeout(() => {
-            window.location.href = "main.html";
+            window.location.href = "main.html"; // Dirige a la página princiap
         }, 500);
     });
 });
 
 /**
  * Este evento es crucial para solucionar el problema del botón "Atrás".
+ * Ya que el focus quedaba activo en movil
  * Se dispara cada vez que la página se vuelve visible.
  */
 window.addEventListener('pageshow', (event) => {

@@ -5,7 +5,8 @@ const iconoMenu = botonMenu.querySelector('i');
 
 if (botonMenu && menuDesplegable) {
     botonMenu.addEventListener('click', () => {
-        // 'toggle' alterna, quita la clase si esta, de lo contrario la asigna (en el css esta definida con display flex, lo que hara sera mostrar el menu)
+        // 'toggle' alterna, quita la clase si esta, de lo contrario la asigna
+        // (en el css esta definida con display flex, lo que hara sera mostrar el menu)
         menuDesplegable.classList.toggle('active');
 
         // Cuando aparece el menu desplegable, el icono ☰ pasa a ser ✖, cambiando la clase del icono
