@@ -1,0 +1,241 @@
+:root {
+    --color-primary: #1E5EFF;
+    --color-secondary: #05173a4c;
+    --color-accent: #00D1FF;
+    --color-text: #EAF0FF;
+    --color-bottom: #8c8c8c;
+    --color-middle: #ebebeb;
+    --color-white: #e1e1e1;
+
+    --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: radial-gradient(circle at top, #0a1a3a, #050814);
+    background-color: #050814;
+}
+
+body {
+    min-height: 100svh;
+    min-height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.5rem;
+
+    background: radial-gradient(circle at top, #0a1a3a, #050814);
+
+    font-family: var(--font-display);
+    color: var(--color-text);
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Patrón animado de puntos como fondo */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    font-family: var(--font-display);
+    background: radial-gradient(#1e5eff22 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: moveGrid 8s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Fade al salir */
+.fade-out {
+    opacity: 0;
+}
+
+/* Contenido */
+.welcome-container {
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    width: 100%;
+}
+
+.glass-card {
+    background: rgba(11, 18, 32, 0.3);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 2px solid rgba(169, 180, 208, 0.15);
+    padding: 4rem 2.5rem;
+    border-radius: 24px;
+    margin: 0 auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.welcome-name,
+.welcome-last-name {
+    text-transform: uppercase;
+    opacity: 0;
+    animation: slideUp 0.8s ease 0.1s forwards;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.welcome-name {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    background: linear-gradient(to top, var(--color-primary), var(--color-accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-last-name {
+    font-size: clamp(1.3rem, 3.5vw, 2.3rem);
+    background: linear-gradient(to top, var(--color-bottom), var(--color-middle), var(--color-white));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+}
+
+.welcome-name-container {
+    position: relative;
+}
+
+.welcome-info-container {
+    position: relative;
+    padding-top: 1.8rem;
+    margin-top: 1.2rem;
+}
+
+
+.welcome-info-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(169, 180, 208, 0.4), transparent);
+    opacity: 0;
+    animation: slideUp 0.8s ease 0.2s forwards;
+}
+
+.welcome-profession {
+    display: block;
+    margin-top: 0;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #A9B4D0;
+    letter-spacing: 0.15rem;
+    opacity: 0;
+    animation: slideUp 0.8s ease 0.3s forwards;
+}
+
+.welcome-text {
+    margin-top: 0.8rem;
+    color: #EAF0FF;
+    font-weight: var(--font-weight-normal);
+    font-size: 0.8rem;
+    opacity: 0;
+    animation: slideUp 0.8s ease 0.5s forwards;
+}
+
+/* Botón de entrar a la página principal */
+.btn-enter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+
+    background: #1E5EFF;
+    color: #FFFFFF;
+    box-shadow: 0 8px 25px rgba(30, 94, 255, 0.3);
+
+    opacity: 0;
+    animation: slideUp 0.8s ease 0.7s forwards;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-enter:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: #00D1FF;
+    color: #000;
+    box-shadow: 0 12px 30px rgba(0, 209, 255, 0.4);
+}
+
+.btn-enter i {
+    transition: transform 0.3s ease;
+}
+
+.btn-enter:hover i {
+    transform: translateX(6px);
+}
+
+@media screen and (max-width: 768px) {
+    .glass-card  {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .welcome-last-name {
+        font-size: 1.2rem;
+    }
+
+    .welcome-profession {
+        font-size: 0.9rem;
+    }
+
+    .welcome-text {
+        font-size: 0.6rem;
+    }
+
+    .btn-enter {
+        padding: 1rem 1.4rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animaciones */
+@keyframes moveGrid {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(40px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
