@@ -577,7 +577,7 @@ body {
     filter: drop-shadow(0 0 2px #ff00cc99);
 }
 
-/* .animated-section {
+.animated-section {
     view-timeline-name: --section;
     view-timeline-axis: block;
 
@@ -585,7 +585,7 @@ body {
     animation-name: show;
     animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
-} */
+}
 
 /* Sección proyectos */
 .project-img-container {
