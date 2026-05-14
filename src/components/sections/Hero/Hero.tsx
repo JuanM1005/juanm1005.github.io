@@ -1,12 +1,12 @@
 import HeroContent from './HeroContent';
 import HeroImage from './HeroImage';
-import { bgSectionsAnimated } from '../Section.styles';
-import { heroContainer, heroSection } from './Hero.styles';
+import { backgroundAnimated } from '../Section.styles';
+import { heroSection, heroContainer } from './Hero.styles';
 import clsx from 'clsx';
 
 const Hero = () => {
   return (
-    <section id="hero" className={clsx(heroSection, bgSectionsAnimated)}>
+    <section id="hero" className={clsx(heroSection, backgroundAnimated)}>
       <div className={heroContainer}>
         <HeroContent />
         <HeroImage />

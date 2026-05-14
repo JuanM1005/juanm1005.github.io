@@ -1,10 +1,3 @@
-export const aboutSection =
-  'border-t border-slate-700/20 bg-slate-950 px-6 py-18 text-slate-100 sm:px-8 lg:px-12';
-
-export const aboutContainer = 'mx-auto max-w-6xl';
-
-export const aboutHeader = 'mx-auto max-w-3xl text-center';
-
 export const aboutTitle =
   'mb-4 block text-4xl sm:text-5xl font-semibold uppercase tracking-wider text-slate-200';
 

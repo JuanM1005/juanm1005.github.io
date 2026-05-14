@@ -2,19 +2,20 @@ import { aboutCards } from '@/components/data';
 
 import AboutCard from './AboutCard';
 
+import { aboutCardsGrid } from './About.styles';
+
 import {
-  aboutCardsGrid,
-  aboutDescription,
-  aboutHeader,
-  aboutTitle,
-} from './About.styles';
+  sectionsHeader,
+  sectionsTitle,
+  sectionsDescription,
+} from '../Section.styles';
 
 const AboutContent = () => {
   return (
     <>
-      <div className={aboutHeader}>
-        <span className={aboutTitle}>Sobre mí</span>
-        <p className={aboutDescription}>
+      <div className={sectionsHeader}>
+        <span className={sectionsTitle}>Sobre mí</span>
+        <p className={sectionsDescription}>
           Soy estudiante de Ingeniería Informática y me encuentro desarrollando
           proyectos académicos enfocados en estructuras de datos, sistemas de
           gestión, desarrollo frontend y análisis de datos. Trabajo con C, C++,
@@ -23,13 +24,13 @@ const AboutContent = () => {
       </div>
 
       <div className={aboutCardsGrid}>
-        {aboutCards.map((card) => (
+        {aboutCards.map((aboutCard) => (
           <AboutCard
-            key={card.title}
-            title={card.title}
-            description={card.description}
-            icon={card.icon}
-            iconClassName={card.iconClassName}
+            key={aboutCard.title}
+            title={aboutCard.title}
+            description={aboutCard.description}
+            icon={aboutCard.icon}
+            iconClassName={aboutCard.iconClassName}
           />
         ))}
       </div>

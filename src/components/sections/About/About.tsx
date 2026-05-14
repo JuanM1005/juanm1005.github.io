@@ -1,11 +1,13 @@
 import AboutContent from './AboutContent';
-
-import { aboutContainer, aboutSection } from './About.styles';
+import {
+  backgroundSections,
+  backgroundSectionsContainer,
+} from '../Section.styles';
 
 const About = () => {
   return (
-    <section id="about" className={aboutSection}>
-      <div className={aboutContainer}>
+    <section id="about" className={backgroundSections}>
+      <div className={backgroundSectionsContainer}>
         <AboutContent />
       </div>
     </section>
