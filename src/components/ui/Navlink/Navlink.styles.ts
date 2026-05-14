@@ -1,0 +1,2 @@
+export const navLinkBase =
+  'inline-flex rounded-lg px-4 py-2 text-base font-medium no-underline text-slate-500 transition-[transform, background-color, color] duration-300 ease-in-out hover:scale-[1.03] hover:bg-slate-800/50 hover:text-gray-50 focus-visible:scale-[1.03] focus-visible:bg-slate-800/50 focus-visible:text-gray-50 focus-visible:outline-1 focus-visible:outline-gray-50 active:scale-[0.98]';
