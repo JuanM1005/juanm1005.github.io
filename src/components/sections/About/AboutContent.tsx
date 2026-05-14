@@ -3,18 +3,18 @@ import { aboutCards } from '@/components/data';
 import AboutCard from './AboutCard';
 
 import {
-  sectionsHeader,
-  sectionsTitle,
-  sectionsDescription,
+  sectionHeader,
+  sectionTitle,
+  sectionDescription,
   sectionAboutGrid,
 } from '../Section.styles';
 
 const AboutContent = () => {
   return (
     <>
-      <div className={sectionsHeader}>
-        <span className={sectionsTitle}>Sobre mí</span>
-        <p className={sectionsDescription}>
+      <div className={sectionHeader}>
+        <span className={sectionTitle}>Sobre mí</span>
+        <p className={sectionDescription}>
           Soy estudiante de Ingeniería Informática y me encuentro desarrollando
           proyectos académicos enfocados en estructuras de datos, sistemas de
           gestión, desarrollo frontend y análisis de datos. Trabajo con C, C++,

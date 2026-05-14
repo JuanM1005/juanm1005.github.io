@@ -3,10 +3,11 @@ import {
   FaCss3Alt,
   FaGitAlt,
   FaHtml5,
-  FaJs,
   FaPython,
   FaReact,
 } from 'react-icons/fa6';
+
+import { SiTypescript } from "react-icons/si";
 
 export type SkillVariant =
   | 'blue'
@@ -31,18 +32,18 @@ export const skillsCards = [
     variant: 'orange',
   },
   {
-    name: 'CSS & Tailwind',
+    name: 'Tailwind & CSS',
     description:
       'Estilos responsivos, diseño visual moderno y creación de interfaces usando utilidades.',
     icon: FaCss3Alt,
-    variant: 'blue',
+    variant: 'purple',
   },
   {
-    name: 'JavaScript',
+    name: 'TypeScript (JS)',
     description:
       'Manipulación de lógica, eventos, arreglos, funciones y comportamiento dinámico en la interfaz.',
-    icon: FaJs,
-    variant: 'yellow',
+    icon: SiTypescript ,
+    variant: 'blue',
   },
   {
     name: 'React',
@@ -63,6 +64,6 @@ export const skillsCards = [
     description:
       'Control de versiones, ramas, commits, flujo de trabajo y respaldo de proyectos.',
     icon: FaGitAlt,
-    variant: 'purple',
+    variant: 'yellow',
   },
 ] as const satisfies readonly SkillItem[];

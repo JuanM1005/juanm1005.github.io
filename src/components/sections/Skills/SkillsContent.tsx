@@ -1,23 +1,23 @@
 import { skillsCards } from '@/components/data';
 import {
-  sectionsHeader,
-  sectionsTitle,
-  sectionsDescription,
-  sectionSkillGrid,
+  sectionHeader,
+  sectionTitle,
+  sectionDescription,
+  sectionSkillsGrid,
 } from '../Section.styles';
 import SkillCard from './SkillsCard';
 
 const SkillsContent = () => {
   return (
-    <div className={sectionsHeader}>
-      <span className={sectionsTitle}>Habilidades</span>
+    <div className={sectionHeader}>
+      <span className={sectionTitle}>Habilidades</span>
 
-      <p className={sectionsDescription}>
+      <p className={sectionDescription}>
         Competencias técnicas y personales que aplico en mis proyectos
         académicos y desarrollo profesional.
       </p>
 
-      <div className={sectionSkillGrid}>
+      <div className={sectionSkillsGrid}>
         {skillsCards.map((skillCard) => (
           <SkillCard
             key={skillCard.name}

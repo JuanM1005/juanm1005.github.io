@@ -1,9 +1,10 @@
-export const skillCard = 'min-h-[260px]';
+export const skillCard = 'h-full min-h-[300px]';
 
-export const skillCardContent = 'flex h-full flex-col';
+export const skillCardContent =
+  'flex h-full flex-col items-center justify-start text-center';
 
 export const skillIconBox =
-  'mb-6 flex h-16 w-16 items-center justify-center rounded-2xl text-3xl shadow-lg';
+  'mb-8 flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl text-3xl shadow-lg';
 
 export const skillIconBlue = 'bg-blue-500 text-white shadow-blue-500/30';
 
