@@ -1,12 +1,11 @@
 import type { IconType } from 'react-icons';
-
-export type AboutIconVariant = 'blue' | 'yellow' | 'green' | 'purple';
+import type { IconVariant } from '../Section.styles';
 
 export type AboutCardItem = {
   title: string;
   description: string;
   icon: IconType;
-  iconClassName: AboutIconVariant;
+  variant: IconVariant;
 };
 
 export type AboutCardProps = AboutCardItem;

@@ -1,4 +1,3 @@
-import type { IconType } from 'react-icons';
 import {
   FaCss3Alt,
   FaGitAlt,
@@ -7,22 +6,10 @@ import {
   FaReact,
 } from 'react-icons/fa6';
 
-import { SiTypescript } from "react-icons/si";
+import { SiTypescript } from 'react-icons/si';
 
-export type SkillVariant =
-  | 'blue'
-  | 'yellow'
-  | 'green'
-  | 'purple'
-  | 'orange'
-  | 'cyan';
+import type { SkillItem } from '../../sections/Skills/Skills.types';
 
-export type SkillItem = {
-  name: string;
-  description: string;
-  icon: IconType;
-  variant: SkillVariant;
-};
 export const skillsCards = [
   {
     name: 'HTML',
@@ -42,7 +29,7 @@ export const skillsCards = [
     name: 'TypeScript (JS)',
     description:
       'Manipulación de lógica, eventos, arreglos, funciones y comportamiento dinámico en la interfaz.',
-    icon: SiTypescript ,
+    icon: SiTypescript,
     variant: 'blue',
   },
   {

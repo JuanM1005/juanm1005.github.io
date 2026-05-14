@@ -18,3 +18,20 @@ export const sectionAboutGrid = 'mt-14 grid gap-7 md:grid-cols-2';
 
 export const sectionSkillsGrid =
   'mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3';
+
+export type IconVariant =
+  | 'blue'
+  | 'yellow'
+  | 'green'
+  | 'purple'
+  | 'orange'
+  | 'cyan';
+
+export const iconVariants: Record<IconVariant, string> = {
+  blue: 'bg-blue-500 text-white shadow-blue-500/30',
+  yellow: 'bg-yellow-400 text-slate-950 shadow-yellow-400/30',
+  green: 'bg-emerald-500 text-white shadow-emerald-500/30',
+  purple: 'bg-violet-500 text-white shadow-violet-500/30',
+  orange: 'bg-orange-500 text-white shadow-orange-500/30',
+  cyan: 'bg-cyan-400 text-slate-950 shadow-cyan-400/30',
+};

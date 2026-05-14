@@ -1,31 +1,15 @@
 import clsx from 'clsx';
-
 import { Card } from '@/components/ui';
-
-import type { SkillCardProps, SkillVariant } from './Skills.types';
+import type { SkillCardProps } from './Skills.types';
+import { iconVariants } from '../Section.styles';
 
 import {
   skillCard,
   skillCardContent,
   skillCardDescription,
-  skillIconBlue,
   skillIconBox,
-  skillIconCyan,
-  skillIconGreen,
-  skillIconOrange,
-  skillIconPurple,
-  skillIconYellow,
   skillCardTitle,
 } from './SkillsCard.styles';
-
-const skillIconVariants: Record<SkillVariant, string> = {
-  blue: skillIconBlue,
-  yellow: skillIconYellow,
-  green: skillIconGreen,
-  purple: skillIconPurple,
-  orange: skillIconOrange,
-  cyan: skillIconCyan,
-};
 
 const SkillCard = ({
   name,
@@ -36,7 +20,7 @@ const SkillCard = ({
   return (
     <Card variant="glass" padding="lg" isClickable className={skillCard}>
       <div className={skillCardContent}>
-        <div className={clsx(skillIconBox, skillIconVariants[variant])}>
+        <div className={clsx(skillIconBox, iconVariants[variant])}>
           <Icon />
         </div>
 

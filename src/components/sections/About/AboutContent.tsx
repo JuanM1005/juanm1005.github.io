@@ -29,7 +29,7 @@ const AboutContent = () => {
             title={aboutCard.title}
             description={aboutCard.description}
             icon={aboutCard.icon}
-            iconClassName={aboutCard.iconClassName}
+            variant={aboutCard.variant}
           />
         ))}
       </div>

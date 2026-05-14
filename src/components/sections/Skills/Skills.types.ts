@@ -1,18 +1,11 @@
 import type { IconType } from 'react-icons';
-
-export type SkillVariant =
-  | 'blue'
-  | 'yellow'
-  | 'green'
-  | 'purple'
-  | 'orange'
-  | 'cyan';
+import type { IconVariant } from '../Section.styles';
 
 export type SkillItem = {
   name: string;
   description: string;
   icon: IconType;
-  variant: SkillVariant;
+  variant: IconVariant;
 };
 
 export type SkillCardProps = SkillItem;
