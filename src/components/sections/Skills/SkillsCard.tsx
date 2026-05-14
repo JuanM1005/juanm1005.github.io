@@ -7,7 +7,7 @@ import type { SkillCardProps, SkillVariant } from './Skills.types';
 import {
   skillCard,
   skillCardContent,
-  skillDescription,
+  skillCardDescription,
   skillIconBlue,
   skillIconBox,
   skillIconCyan,
@@ -15,8 +15,8 @@ import {
   skillIconOrange,
   skillIconPurple,
   skillIconYellow,
-  skillName,
-} from './Skills.styles';
+  skillCardTitle,
+} from './SkillsCard.styles';
 
 const skillIconVariants: Record<SkillVariant, string> = {
   blue: skillIconBlue,
@@ -40,9 +40,9 @@ const SkillCard = ({
           <Icon />
         </div>
 
-        <h3 className={skillName}>{name}</h3>
+        <h3 className={skillCardTitle}>{name}</h3>
 
-        <p className={skillDescription}>{description}</p>
+        <p className={skillCardDescription}>{description}</p>
       </div>
     </Card>
   );

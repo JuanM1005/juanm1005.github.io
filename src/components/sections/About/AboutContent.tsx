@@ -2,12 +2,11 @@ import { aboutCards } from '@/components/data';
 
 import AboutCard from './AboutCard';
 
-import { aboutCardsGrid } from './About.styles';
-
 import {
   sectionsHeader,
   sectionsTitle,
   sectionsDescription,
+  sectionAboutGrid,
 } from '../Section.styles';
 
 const AboutContent = () => {
@@ -23,7 +22,7 @@ const AboutContent = () => {
         </p>
       </div>
 
-      <div className={aboutCardsGrid}>
+      <div className={sectionAboutGrid}>
         {aboutCards.map((aboutCard) => (
           <AboutCard
             key={aboutCard.title}

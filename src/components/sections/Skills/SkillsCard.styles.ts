@@ -1,5 +1,3 @@
-export const skillsGrid = 'mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
-
 export const skillCard = 'min-h-[260px]';
 
 export const skillCardContent = 'flex h-full flex-col';
@@ -20,4 +18,6 @@ export const skillIconOrange = 'bg-orange-500 text-white shadow-orange-500/30';
 
 export const skillIconCyan = 'bg-cyan-400 text-slate-950 shadow-cyan-400/30';
 
-export const skillName = 'text-2xl font-bold text-white';
+export const skillCardTitle = 'text-2xl font-bold text-white';
+
+export const skillCardDescription = 'mt-4 text-sm leading-7 text-slate-400';

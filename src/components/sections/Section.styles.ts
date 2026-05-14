@@ -1,4 +1,4 @@
-export const backgroundAnimated =
+export const backgroundSectionsAnimated =
   'bg-[radial-gradient(#1e5eff22_1px,transparent_1px)] bg-[size:30px_30px] animate-[moveGrid_5s_linear_infinite]';
 
 export const backgroundSections =
@@ -13,3 +13,8 @@ export const sectionsTitle =
 
 export const sectionsDescription =
   'mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg';
+
+export const sectionSkillGrid =
+  'mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
+
+export const sectionAboutGrid = 'mt-14 grid gap-7 md:grid-cols-2';

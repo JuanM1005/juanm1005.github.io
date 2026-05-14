@@ -14,7 +14,7 @@ import {
   aboutIconGreen,
   aboutIconPurple,
   aboutIconYellow,
-} from './About.styles';
+} from './AboutCard.styles';
 
 const iconVariants: Record<AboutIconVariant, string> = {
   blue: aboutIconBlue,

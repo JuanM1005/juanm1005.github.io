@@ -1,5 +1,3 @@
-export const aboutCardsGrid = 'mt-14 grid gap-7 md:grid-cols-2';
-
 export const aboutCard = 'min-h-[300px] overflow-hidden';
 
 export const aboutCardContent =

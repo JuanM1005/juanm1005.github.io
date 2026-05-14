@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import {
-  backgroundAnimated,
+  backgroundSectionsAnimated,
   backgroundSections,
   backgroundSectionsContainer,
 } from '../Section.styles';
@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className={clsx(backgroundSections, backgroundAnimated)}
+      className={clsx(backgroundSections, backgroundSectionsAnimated)}
     >
       <div className={backgroundSectionsContainer}>
         <SkillsContent />
