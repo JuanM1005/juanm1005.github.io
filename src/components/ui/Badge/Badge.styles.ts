@@ -24,8 +24,8 @@ export const badgeDotPing =
 export const badgeDotBase = 'relative inline-flex rounded-full';
 
 export const badgeDotSizes: Record<BadgeSize, string> = {
-  sm: 'size-2',
-  md: 'size-2.5',
+  sm: 'size-2.5',
+  md: 'size-3',
 };
 
 export const badgeDotVariants: Record<BadgeVariant, string> = {
