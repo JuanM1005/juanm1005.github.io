@@ -1,23 +1,12 @@
-import { Navbar, Hero, Card } from '@/components';
-import { projectTechNest } from '@/assets';
+import { Navbar, Hero, About } from '@/components';
 
 const App = () => {
   return (
     <>
       <Navbar />
-
-      <main className="bg-slate-950">
+      <main>
         <Hero />
-        <Card variant="glass" padding="lg" isClickable>
-          <img src={projectTechNest} alt="" />
-          <h2 className="text-2xl font-bold text-slate-200">
-            Card del portfolio
-          </h2>
-          <p className="mt-2 text-slate-400">
-            Este componente servirá para secciones como Sobre mí, Habilidades y
-            Proyectos.
-          </p>
-        </Card>
+        <About />
       </main>
     </>
   );
