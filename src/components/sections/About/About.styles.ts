@@ -15,7 +15,8 @@ export const aboutCardsGrid = 'mt-14 grid gap-7 md:grid-cols-2';
 
 export const aboutCard = 'min-h-[300px] overflow-hidden';
 
-export const aboutCardContent = 'flex h-full flex-col justify-center items-center text-center';
+export const aboutCardContent =
+  'flex h-full flex-col justify-center items-center text-center';
 
 export const aboutIconBox =
   'mb-8 flex h-20 w-20 items-center justify-center rounded-2xl text-3xl shadow-lg';

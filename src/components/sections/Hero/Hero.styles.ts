@@ -1,5 +1,5 @@
 export const heroSection =
-  'relative flex min-h-svh items-center overflow-hidden bg-slate-950 bg-[radial-gradient(#1e5eff22_1px,transparent_1px)] bg-[size:30px_30px] animate-[moveGrid_5s_linear_infinite] px-6 pt-32 pb-12 text-slate-100';
+  'relative flex min-h-svh items-center overflow-hidden bg-slate-950 px-6 pt-32 pb-12 text-slate-100';
 
 export const heroContainer =
   'mx-auto flex w-full max-w-7xl items-center justify-between gap-12 px-4';
