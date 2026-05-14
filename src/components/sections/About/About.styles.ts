@@ -1,9 +1,3 @@
-export const aboutTitle =
-  'mb-4 block text-4xl sm:text-5xl font-semibold uppercase tracking-wider text-slate-200';
-
-export const aboutDescription =
-  'mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg';
-
 export const aboutCardsGrid = 'mt-14 grid gap-7 md:grid-cols-2';
 
 export const aboutCard = 'min-h-[300px] overflow-hidden';
