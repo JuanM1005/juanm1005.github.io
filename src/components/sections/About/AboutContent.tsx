@@ -1,4 +1,4 @@
-import { aboutCards } from '@/components/data';
+import { aboutData } from '@/components/data';
 
 import AboutCard from './AboutCard';
 
@@ -23,13 +23,13 @@ const AboutContent = () => {
       </div>
 
       <div className={sectionAboutGrid}>
-        {aboutCards.map((aboutCard) => (
+        {aboutData.map((data) => (
           <AboutCard
-            key={aboutCard.title}
-            title={aboutCard.title}
-            description={aboutCard.description}
-            icon={aboutCard.icon}
-            variant={aboutCard.variant}
+            key={data.title}
+            title={data.title}
+            description={data.description}
+            icon={data.icon}
+            variant={data.variant}
           />
         ))}
       </div>

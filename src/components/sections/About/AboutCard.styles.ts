@@ -1,4 +1,4 @@
-export const aboutCard = 'min-h-[300px] overflow-hidden';
+export const aboutCard = 'min-h-[320px] overflow-hidden';
 
 export const aboutCardContent =
   'flex h-full flex-col justify-center items-center text-center';

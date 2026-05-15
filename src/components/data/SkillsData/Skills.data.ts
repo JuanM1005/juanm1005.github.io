@@ -14,9 +14,9 @@ import {
 
 import { SiTypescript } from 'react-icons/si';
 
-import type { SkillItem } from '../../sections/Skills/Skills.types';
+import type { SkillItem } from '@/components/sections/Skills/Skills.types';
 
-export const hardSkillsCards = [
+export const hardSkillsData = [
   {
     name: 'HTML',
     description:
@@ -61,7 +61,7 @@ export const hardSkillsCards = [
   },
 ] as const satisfies readonly SkillItem[];
 
-export const softSkillsCards = [
+export const softSkillsData = [
   { name: 'Disciplina y compromiso', icon: FaBullseye, variant: 'blue' },
   { name: 'Aprendizaje continuo', icon: FaLightbulb, variant: 'yellow' },
   { name: 'Trabajo en equipo', icon: FaUsers, variant: 'cyan' },

@@ -1,8 +1,8 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-type ButtonVariant = 'base' | 'primary' | 'secondary';
+export type ButtonVariant = 'base' | 'primary' | 'secondary';
 
-type ButtonSize = 'sm' | 'md' | 'lg';
+export type ButtonSize = 'sm' | 'md' | 'lg';
 
 /**
  * Props del componente Button.

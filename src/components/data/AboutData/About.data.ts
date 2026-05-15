@@ -1,7 +1,7 @@
 import { FaCode, FaDatabase, FaGitAlt, FaPython } from 'react-icons/fa6';
-import type { AboutCardItem } from '../../sections/About/About.types';
+import type { AboutCardItem } from '@/components/sections/About/About.types';
 
-export const aboutCards = [
+export const aboutData = [
   {
     title: 'Frontend con React',
     description:

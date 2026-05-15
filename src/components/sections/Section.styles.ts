@@ -19,6 +19,9 @@ export const sectionAboutGrid = 'mt-14 grid gap-7 md:grid-cols-2';
 export const sectionSkillsGrid =
   'mt-14 grid items-start gap-8 md:grid-cols-2 md:grid-rows-[auto_auto_auto_auto]';
 
+export const sectionProjectsGrid =
+  'mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3';
+
 export type IconVariant =
   | 'blue'
   | 'yellow'

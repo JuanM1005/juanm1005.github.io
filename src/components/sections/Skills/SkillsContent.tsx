@@ -1,4 +1,4 @@
-import { hardSkillsCards, softSkillsCards } from '@/components/data';
+import { hardSkillsData, softSkillsData } from '@/components/data';
 import {
   sectionHeader,
   sectionTitle,
@@ -19,8 +19,8 @@ const SkillsContent = () => {
       </div>
 
       <div className={sectionSkillsGrid}>
-        <SkillsColumn title="Hard Skills" items={hardSkillsCards} />
-        <SkillsColumn title="Soft Skills" items={softSkillsCards} />
+        <SkillsColumn title="Hard Skills" items={hardSkillsData} />
+        <SkillsColumn title="Soft Skills" items={softSkillsData} />
       </div>
     </>
   );
