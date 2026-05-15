@@ -13,14 +13,8 @@ const SkillsColumn = ({ title, items }: SkillsColumnProps) => {
       <h3 className={skillsColumnTitle}>{title}</h3>
 
       <div className={skillsColumnGrid}>
-        {items.map((skill) => (
-          <SkillCard
-            key={skill.name}
-            name={skill.name}
-            description={skill.description}
-            icon={skill.icon}
-            variant={skill.variant}
-          />
+        {items.map((data) => (
+          <SkillCard key={data.name} {...data} />
         ))}
       </div>
     </div>

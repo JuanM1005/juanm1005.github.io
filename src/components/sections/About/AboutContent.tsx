@@ -24,13 +24,7 @@ const AboutContent = () => {
 
       <div className={sectionAboutGrid}>
         {aboutData.map((data) => (
-          <AboutCard
-            key={data.title}
-            title={data.title}
-            description={data.description}
-            icon={data.icon}
-            variant={data.variant}
-          />
+          <AboutCard key={data.title} {...data} />
         ))}
       </div>
     </>
