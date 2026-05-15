@@ -15,12 +15,12 @@ export type Collaborator = {
 
 export interface ProjectItem extends Pick<
   ImgHTMLAttributes<HTMLImageElement>,
-  'src' | 'alt' | 'loading' | 'decoding'
+  'loading' | 'decoding'
 > {
   title: string;
   description: string;
-  src: string;
-  alt: string;
+  src: string; // declarado aquí como required
+  alt: string; // declarado aquí como required
   tags: readonly string[];
   link?: ProjectLink;
   collaborators?: readonly Collaborator[];

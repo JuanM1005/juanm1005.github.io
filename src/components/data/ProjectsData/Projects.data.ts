@@ -74,7 +74,7 @@ export const projectsData = [
     alt: 'Visualización de clústeres PCA del proyecto de señales EOG',
     tags: ['Python', 'K-Means', 'PCA', 'Scikit-learn'],
     link: {
-      url: 'TU_URL_DE_COLAB',
+      url: 'https://colab.research.google.com/drive/1bo6uzsRMoOF7e6HFwC1KQf8BETyG_upD?usp=sharing',
       kind: 'colab',
     },
     collaborators: [
