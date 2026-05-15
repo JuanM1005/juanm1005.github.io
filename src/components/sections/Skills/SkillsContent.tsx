@@ -1,34 +1,28 @@
-import { skillsCards } from '@/components/data';
+import { hardSkillsCards, softSkillsCards } from '@/components/data';
 import {
   sectionHeader,
   sectionTitle,
   sectionDescription,
   sectionSkillsGrid,
 } from '../Section.styles';
-import SkillCard from './SkillsCard';
+import SkillsColumn from './SkillsColumn';
 
 const SkillsContent = () => {
   return (
-    <div className={sectionHeader}>
-      <span className={sectionTitle}>Habilidades</span>
-
-      <p className={sectionDescription}>
-        Competencias técnicas y personales que aplico en mis proyectos
-        académicos y desarrollo profesional.
-      </p>
+    <>
+      <div className={sectionHeader}>
+        <span className={sectionTitle}>Habilidades</span>
+        <p className={sectionDescription}>
+          Competencias técnicas y personales que aplico en mis proyectos
+          académicos y desarrollo profesional.
+        </p>
+      </div>
 
       <div className={sectionSkillsGrid}>
-        {skillsCards.map((skillCard) => (
-          <SkillCard
-            key={skillCard.name}
-            name={skillCard.name}
-            description={skillCard.description}
-            icon={skillCard.icon}
-            variant={skillCard.variant}
-          />
-        ))}
+        <SkillsColumn title="Hard Skills" items={hardSkillsCards} />
+        <SkillsColumn title="Soft Skills" items={softSkillsCards} />
       </div>
-    </div>
+    </>
   );
 };
 

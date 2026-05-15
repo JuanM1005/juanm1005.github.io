@@ -26,7 +26,7 @@ const SkillCard = ({
 
         <h3 className={skillCardTitle}>{name}</h3>
 
-        <p className={skillCardDescription}>{description}</p>
+        {description && <p className={skillCardDescription}>{description}</p>}
       </div>
     </Card>
   );

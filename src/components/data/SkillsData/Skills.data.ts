@@ -4,13 +4,19 @@ import {
   FaHtml5,
   FaPython,
   FaReact,
+  FaBullseye,
+  FaLightbulb,
+  FaUsers,
+  FaArrowsRotate,
+  FaArrowTrendUp,
+  FaChessKing,
 } from 'react-icons/fa6';
 
 import { SiTypescript } from 'react-icons/si';
 
 import type { SkillItem } from '../../sections/Skills/Skills.types';
 
-export const skillsCards = [
+export const hardSkillsCards = [
   {
     name: 'HTML',
     description:
@@ -53,4 +59,13 @@ export const skillsCards = [
     icon: FaGitAlt,
     variant: 'yellow',
   },
+] as const satisfies readonly SkillItem[];
+
+export const softSkillsCards = [
+  { name: 'Disciplina y compromiso', icon: FaBullseye, variant: 'blue' },
+  { name: 'Aprendizaje continuo', icon: FaLightbulb, variant: 'yellow' },
+  { name: 'Trabajo en equipo', icon: FaUsers, variant: 'cyan' },
+  { name: 'Adaptabilidad', icon: FaArrowsRotate, variant: 'green' },
+  { name: 'Mejora constante', icon: FaArrowTrendUp, variant: 'orange' },
+  { name: 'Liderazgo', icon: FaChessKing, variant: 'purple' },
 ] as const satisfies readonly SkillItem[];
